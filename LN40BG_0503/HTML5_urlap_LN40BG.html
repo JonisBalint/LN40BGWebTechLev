@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <style>
+                    body {
+            font-family: Arial;
+            width: 600px;
+
+        }
+                    div {
+            background-color:rgb(183, 253, 250);
+            border-radius: 10px;
+            padding: 20px;
+            width: 600px;
+            box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        </style>
+    </head>
+<body>
+
+<h2>HTML5 űrlap - LN40BG</h2>
+<div>
+<section id="tartalom" class="urlap";>
+<form id="urlap" name="urlap" action="feldolgozo.php" method="GET" target="_self">
+  
+    Név: <input type="text" id="nev" name="nev" placeholder="Írd be a neved" autofocus autocomplete="off" required pattern="[a-zA-ZöüóőúéáűíÖÜÓŐÚÉÁŰÍ]{5,50}" />
+    <br /><br />
+
+    PIN kód: <input type="text" id="kod" name="kod" placeholder="Írd be a PIN kódod" autofocus autocomplete="off" required pattern="[0-9]{4}" />
+    <br /><br />
+
+    Kedvenc gyümölcs: <input type="text" name="gyumolcs" list="gyumolcsok">
+
+    <datalist id="gyumolcsok">
+        <option value="dinnye">d</option>
+        <option value="banán"></option>
+        <option value="ananász">d</option>
+        <option value="eper">250Ft/kg</option>
+        <option value="alma">180Ft/kg</option>
+    </datalist>
+    <br /><br />
+    
+    Életkor: <input type="number" name="eletkor"  min="1" max="100" style="width: 40px;">
+    <br /><br />
+
+    Lábméret: <input type="number" name="labmeret"  min="25" max="50" step="0.5" style="width: 60px;">
+    <br /><br />
+
+    Önbizalom: &nbsp;&nbsp;&nbsp;0<input type="range" name="onbizalom" min="0" max="100" style="width: 300px;  background: #FFF; accent-color: rgb(24, 163, 255);">100
+</form>
+
+    <br><br><br>
+
+    <input type="submit" value="ELKÜLDÖM" form="urlap" formaction="feldolgozo.php" formmethod="POST" />
+    &nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Elküldöm elenőrzés nélkül" form="urlap" formnovalidate formtarget="ujablak" />
+</div>
+    </section>
+<span>
+    <footer id="lablec" class="lablec" style="text-align: right; border-top:1px solid #ccc; width:640px; padding-top:20px">
+        Forrás:
+        <a href="https://html5doctor.com/html5-forms-introduction-and-new-attributes" target="ujablak">https://html5doctor.com/html5-forms-introduction-and-new-attributes</a>
+        <br><br>
+        
+        Formátumok: <a href="https://html5pattern.com" target="ujablak">https://html5pattern.com</a>
+        <br><br>
+
+        JavaScript REGEXP: <a href="https://www.w3schools.com/js/js_regexp.asp" target="ujablak">https://www.w3schools.com/js/js_regexp.asp</a>
+    </footer>
+</span>
+</body>
+</html>
+
