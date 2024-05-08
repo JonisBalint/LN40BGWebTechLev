@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <style>
+            ul {
+                list-style: none;
+                padding-left: 0;
+            }​
+            h3 {
+                text-indent: 0;
+                padding-left: 0;
+            }
+            li {
+                padding-left: 20px;
+            }
+        </style>
+        <title>JavaScript - JSON</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html"/>
+
+        <script src="jquery/jquery-3.7.1.js"></script>
+    </head>
+
+    <body>
+
+        <h3>Tömbökön belüli tömbök ciklusa</h3>
+
+        <p id="LN40BG"></p>
+
+        <script>
+            let JBObj, i, j, x = "";
+            JBObj = {
+                "name":"JB",
+                "age":22,
+                "cars": [
+                    {"name":"Toyota", "models":["CHR", "Corolla", "Proace"]},
+                    {"name":"Ford", "models":["Kuga", "Mondeo", "Mustang"]},
+                    {"name":"BMW", "models":["320", "X3", "X5"]},
+                    {"name":"Fiat", "models":["500", "Panda", "Tipo"]},
+                ]
+            }
+
+            for (i in JBObj.cars){
+                x += "<ul><h3>" + JBObj.cars[i].name + "</h3></ul>";
+                for (j in JBObj.cars[i].models){
+                    x +="<li>"+JBObj.cars[i].models[j] + "<br></li>";
+                }
+            }
+
+            document.getElementById("LN40BG").innerHTML = x;
+        </script>
+    </body>
+</html>
