@@ -17,11 +17,11 @@
     <form id="calculator">
 
         <label for="num1"><b>A=</b></label>
-        <input type="number" id="num1" name="num1" required pattern="/[0-9]/" style="background-color: rgb(98, 146, 235);">
+        <input type="number" id="num1" name="num1" required pattern="/[0-9]/" oninput="this.value = Math.round(this.value);" style="background-color: rgb(98, 146, 235);">
         <br><br>
 
         <label for="num2"><b>B=</b></label>
-        <input type="number" id="num2" name="num2" required pattern="/[0-9]/" style="background-color: rgb(98, 146, 235);" >
+        <input type="number" id="num2" name="num2" required pattern="/[0-9]/" oninput="this.value = Math.round(this.value);" style="background-color: rgb(98, 146, 235);" >
         <br><br>
 
         <input type="radio" id="multiply" name="operator" value="multiply">
