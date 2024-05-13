@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery/jquery-3.7.1.js"></script>
+    <script src="LN40BG_7.js" defer></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 150px;
+            background-color: green;
+            text-align: left;
+            vertical-align: top;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 12pt;
+            position: relative;
+        }
+        *{font-weight: bolder;}
+    </style>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <h2 id="h2"></h1>
+    <button id="szoveg">Szöveg hozzáadása</button>
+    &nbsp;
+    <button id="gomb">Gomb</button>
+    &nbsp;
+    <button id="uj_gomb">Új Gomb felvétele</button>
+    &nbsp;
+    <button id="fejlec">Fejléc felvétele</button>
+    &nbsp;
+    <button id="alcim">Alcím felvétele</button>
+    &nbsp;
+    <button id="urlap_fejlec">Űrlap fejléc felvétele</button>
+    
+    
+    <div id="box">ME GEIK – MI
+        <p style="font-size: 30px;"><b>. . . . .</b></p>
+    </div>
+    <form>
+        <h1 id="form_fejlec"></h1>
+        <label for="name">Név:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email">
+        <br><br>
+        <label for="password">Jelszó:</label>
+        <input type="password" id="password" name="password">
+        <br><br><br>
+        &nbsp;
+        <button type="submit">Jelentkezés</button>
+    </form>
+    <br>
+    <br>
+    <p>Forrás: <a href="https://www.w3schools.com/jquery/jquery_dom_get.asp" target="_blank" id="link">https://www.w3schools.com/jquery/jquery_dom_get.asp</a></p>
+    <p id="gombbeilleszt"></p>
+
+</body>
+</html>
