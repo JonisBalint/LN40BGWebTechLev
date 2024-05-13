@@ -4,7 +4,7 @@ $(document).ready(function(){
     function animateBox() {
         animation = $("#box")
         .animate({
-            left: '600px',
+            left: '200px',
             width: '400px',
             fontSize: '30pt'
         }, 1000)
@@ -32,6 +32,10 @@ $(document).ready(function(){
     }
     $("#osszecsukkinyit").click(function(){
         $("#box").slideToggle();
+        animation = $("#box")
+        .animate({
+        left: '400px',
+    }, 1000)
     });
 
     $("#startAnimation").click(function(){
