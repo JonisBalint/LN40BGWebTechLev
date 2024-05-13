@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#szoveg').click(function() {
-        $('#box').append('<p>Mérnökinformatikus</p>');
+        $('#box').append('Mérnökinformatikus');
     });
 
     $('#urlap_fejlec').click(function() {
