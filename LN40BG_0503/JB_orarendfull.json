@@ -1,0 +1,72 @@
+{
+    "JB orarend": {
+        "kurzus": [
+          {
+    "kurzusnev": "Adatkezelés XML-es környezetben",
+    "idopont": {
+        "nap": "kedd",
+        "tol": 14,
+        "ig": 16
+    },
+    "helyszin": "In103",
+    "oktato": "Dr. Bednarik László",
+    "szak": "PTI, MI"
+    },
+{
+    "kurzusnev": "Java programozás",
+    "idopont": {
+        "nap": "péntek",
+        "tol": 12,
+        "ig": 16
+    },
+    "helyszin": "In101",
+    "oktato": "Szücs Miklós",
+    "szak": "PTI, MI"
+},
+
+{
+    "kurzusnev": "Szoftvertechnológia gyakorlatok",
+    "idopont": {
+        "nap": "péntek",
+        "tol": 12,
+        "ig": 16
+    },
+    "helyszin": "In103",
+    "oktato": "Sátán Ádám",
+    "szak": "PTI, MI"
+},
+
+{
+    "kurzusnev": "Adatbázis rendszerek II",
+    "idopont": {
+        "nap": "szombat",
+        "tol": 8,
+        "ig": 12
+    },
+    "helyszin": "In101",
+    "oktato": "Szücs Miklós",
+    "szak": "PTI, MI"
+}
+        ]
+    },
+
+    "cim":
+        {
+        "street": "Egyetemváros",
+        "city": "Miskolc",
+        "code": "1021"
+    },
+    
+    "phone number":
+    [
+        {
+            "type": "Vezetékes:",
+            "number": "0646 555-123"
+        },
+        {
+            "type": "Mobil",
+            "number": "0670 555-4567"
+        }
+    ]
+
+}
