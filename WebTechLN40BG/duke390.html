@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTM Duke 390</title>
+    <link rel="stylesheet" href="duke.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+ h1{
+  color:rgb(199, 86, 6);
+ }
+
+th, td {
+    padding:10px 25px 10px 25px;
+  text-align: left;
+  color:white;
+}
+
+th{
+    font-size: 20px;
+    color:rgb(199, 86, 6);
+    text-align: left;
+    font-weight: bold;
+}
+
+footer {
+    padding:20px;
+    bottom: 0;
+    border-top: 1px solid #ffffff;
+}
+
+p {
+  display: inline-block;
+  }
+
+  input[type=range] {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: slider-vertical;
+    accent-color: rgb(255, 100, 10)
+    
+  }
+
+  #vol-control{
+    position:absolute;
+    left:25px;
+    top:-125px;
+    z-index: 2;
+  }
+
+  .carousel-caption {
+            margin-left: 300px;
+            text-align: justify;
+        }
+
+        a:hover {
+                text-decoration: none; /* Aláhúzás eltávolítása */
+                color: inherit; /* Szín öröklése a szülőtől */
+            }
+</style>
+</head>
+
+<body>
+    <header>
+        <!-- A videó beágyazása -->
+        <video id="ktmVideo" loop poster="dukekepek/duke390tn.png">
+            <source src="dukekepek/duke390.mp4" type="video/mp4">
+            A böngésződ nem támogatja a videót.
+        </video>
+        <!--irányító gombok-->
+        <div class="video-controls">
+            <button id="rewindButton" class="control-button"><<</button>
+            <button id="pauseButton" onclick="togglePause()" class="control-button" style="display:none;">&#10074;&#10074;</button>
+            <button id="playButton" onclick="togglePlay()" class="control-button">&#9654;</button>
+            <button id="forwardButton" class="control-button">>></button>
+            <button id="mute" class="control-button" onclick="toggleMute()">&#128266;</button>
+            <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+
+            <div class="dropdown">
+                <button id="sebesseg" class="dropbtn control-button" style="background-color: rgb(199, 86, 6); font-size:15px;">&#9881;</button>
+                <li class="dropdown-content" style="bottom:100%; width:25px">
+                    <button class="control-button" onclick="setPlaybackRate(2)">2x</button>
+                    <button class="control-button" onclick="setPlaybackRate(1)">1x</button>
+                    <button class="control-button" onclick="setPlaybackRate(0.5)">0.5x</button>
+                </li>
+            </div>
+    </div>
+<!--menü linkekkel többi oldalra+lista -->
+        <h1>KTM Duke 390</h1>
+        <nav style="background:rgb(199, 86, 6)" >
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" style="background:none">Naked</a>
+                    <div class="dropdown-content">
+                        <a href="duke390.html">Duke 390</a>
+                        <a href="superduke.html">Superduke 1390</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" style="background:none">Sport</a>
+                    <div class="dropdown-content">
+                        <a href="rc390.html">RC 390</a>
+                        <a href="rc8.html">RC8C</a>
+                    </div>
+                </li>
+                <li><a href="kapcsolat.html" style="background:none">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<!--színválasztós-->
+<div class="checkbox-container">
+        <input type="checkbox" class="sarga-checkbox" id="sargacb" onclick="uncheckOther(this)" checked>
+        <input type="checkbox" class="kek-checkbox" id="kekcb" onclick="uncheckOther(this)">
+    </div>
+
+<div align="left" style="border-top: 2px solid rgb(199, 86, 6); border-bottom: 2px solid rgb(199, 86, 6); padding:10px; margin:40px 0px 20px; color:white; font-size: 20px; max-width: 500px;">
+    <p style="margin: 0;">ALAPÁR: 2,385,900.00 HUF</p>
+</div>
+
+<div>
+    <img id="dukeImage" src="dukekepek/duke390_1s.png" alt="Duke 390" style="position: absolute; top:550px; left:750px;">
+    <button onclick="changeImage(-1)" class="glyphicon glyphicon-chevron-left" style="position: relative; top:250px; left:740px; background-color:rgb(199, 86, 6)"></button>
+    <button onclick="changeImage(1)" class="glyphicon glyphicon-chevron-right" style="position: relative; top:250px; left:1590px; background-color:rgb(199, 86, 6)"></button>
+</div>
+
+
+
+
+    <p align="left" style="max-width: 500px; color:white; font-size: 18px; line-height: 150%; padding:10px">A vadonatúj 2024-es KTM 390 DUKE-kal a körülötted lévő világ a te saját edzőtermeddé válik. Kivételes agilitást, könnyű kezelhetőséget és ütős teljesítményt hoz az utcára, ez a közepes súlyú bruiser készen áll arra, hogy bármilyen fordulatot vegyen. A legmodernebb vezetési segédeszközöket, teljesen új vázat, állítható felfüggesztést – és agresszív, új megjelenést – a 2024-es KTM 390 DUKE viseli az aszfalt felfaragásának koronáját.</p>
+
+    <img src="banner.png" style="width:100%; margin-top: 300px; background-position: center; display:flex;">
+<!-- Carousel 1 -->
+      <div class="container" style="margin:100px;">
+        <h1>01. VÁLTÓT BE, MOTORT FELPÖRGETNI!</h1>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+      
+            <div class="item active">
+              <img src="dukeslider/s1.png" style="width:400px;">
+              <div class="carousel-caption" style="color:gray">
+                <h3>Szabályozhatóság</h3>
+                <p>A KTM 390 DUKE 43 mm-es WP APEX nyitott kazettás villája állítható tömörítéssel és visszapattanással könnyen megtalálhatja a tökéletes egyensúlyt kedvenc aszfaltcsíkjának megtámadásakor, vagy néhány szűk, kúppal jelölt sarkon való csúsztatáskor. A hátoldalon a WP APEX Separate dugattyús lengéscsillapító visszapattanásra és előfeszítésre is beállítható, hogy megtalálja az ideális keveréket a kényelem és a tapadás között.</p>
+              </div>
+            </div>
+      
+            <div class="item">
+              <img src="dukeslider/s2.png" style="width:400px;">
+              <div class="carousel-caption" style="color:gray">
+                <h3>TFT kijelző és csatlakoztathatóság</h3>
+                <p>Minden, amire szüksége van egy pillantással. A 2024-es KTM 390 DUKE vadonatúj 5"-es ragasztott üveg TFT-műszerfalat tartalmaz. Ez egy új kapcsolókockával párosul, amely 4 irányú menükapcsolókkal lehetővé teszi az összes járműfunkcióval való egyszerű interakciót – még az okostelefonok csatlakoztatását is. Ennek apropóján az összes Az új generációs DUKE modellek csatlakozási funkciókkal vannak felszerelve, amelyek lehetővé teszik a pilóták számára, hogy zenét játsszanak, fogadják a bejövő hívásokat, és a „Turn-by-Turn” segítségével elérjék a kívánt célt.</p>
+              </div>
+            </div>
+          
+            <div class="item">
+              <img src="dukeslider/s3.png" style="width:400px;">
+              <div class="carousel-caption" style="color:gray">
+                <h3>Karosszéria</h3>
+                <p>A NAKED vonalat felölelő 2024-es KTM 390 DUKE nem szégyell mindent elviselni. A mindig lenyűgöző árnyékot vető, cápaszerű élekkel és látható légbeömlőkkel borított KTM 390 DUKE agresszív kiállással büszkélkedhet. Új fém üzemanyagtartály, színes befecskendezésű műanyagok és külső LED helyzetjelző lámpák teszik teljessé a csomagot.</p>
+              </div>
+            </div>
+        
+            <div class="item">
+              <img src="dukeslider/s4.png" style="width:400px;">
+              <div class="carousel-caption" style="color:gray">
+                <h3>Grafika</h3>
+                <p>A 2024-es KTM 390 DUKE alapfelszereltsége a prémium megjelenés. A kiváló minőségű, többrétegű, nedvesre festett felület akár vadonatúj Elektronikus narancs, akár Atlantik kék, tiszta fényű grafikával tökéletesen kiemeli az egyedülálló DUKE texturált üléshuzatot. Tévedés ne essék, ez 100% DUKE 110% utcai hitelességgel.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" style="color:rgb(199, 86, 6);"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" style="color:rgb(199, 86, 6);" ></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <img src="banner2.png" style="width:100%; margin-top: 200px; background-position: center; display:flex;">
+
+<!-- Carousel 2 -->
+      <div class="container" style="margin:100px; margin-left:550px">
+        <h1>02. 3, 2, 1 - INDÍTÁS!</h1>
+        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel2" data-slide-to="1"></li>
+            <li data-target="#myCarousel2" data-slide-to="2"></li>
+            <li data-target="#myCarousel2" data-slide-to="3"></li>
+            <li data-target="#myCarousel2" data-slide-to="4"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+      
+            <div class="item active">
+              <img src="dukeslider/s5.png" style="width:400px;">
+              <div class="carousel-caption">
+                <h3>Motor</h3>
+                <p>Az LC4c motorok legújabb generációjával büszkélkedő 2024-es KTM 390 DUKE 399 köbcentiméteres kapacitással, nagyobb teljesítménnyel, egyenletesebb gyorsulással és könnyebb össztömeggel rendelkezik, mint korábban. A kismotoros játékban szerzett több éves tapasztalatból merítve a 2024-es KTM 390 DUKE továbbfejlesztett sebességváltóval és optimalizált hengerfejjel is rendelkezik, és készen áll az EURO5.2 kibocsátási szabványok elfogadására. Ó, és említettük, hogy KÉSZ a VERSENYRE?</p>
+              </div>
+            </div>
+      
+            <div class="item">
+              <img src="dukeslider/s2.png" style="width:400px;">
+              <div class="carousel-caption">
+                <h3>Ride módok</h3>
+                <p>A 2024-es KTM 390 DUKE a RIDE MÓDOK választékát kínálja pilótáinak, hogy minden körülmények között a legjobban megfeleljenek. Az alapkivitelben aktivált STREET mód felszabadítja a KTM 390 DUKE összes dühét, míg a RAIN mód egy kicsit jobban irányítja a dolgokat. a nedvesben. Mindkettő egyszerűen bekapcsolható a TFT kijelzőn keresztül.</p>
+              </div>
+            </div>
+          
+            <div class="item">
+              <img src="dukeslider/s6.png" style="width:400px;">
+              <div class="carousel-caption">
+                <h3>Indítási művelet</h3>
+                <p>Készüljön fel a vonalról való leszállásra, mert a 2024-es KTM 390 DUKE alapfelszereltségként fel van szerelve kilövésvezérléssel. Amikor a rendszer be van kapcsolva, a motor 7000 ford./percnél éri el a csúcsot tágra nyitott gáz mellett, megvárva, amíg a tengelykapcsoló leesik.</p>
+              </div>
+            </div>
+        
+            <div class="item">
+              <img src="dukeslider/s7.png" style="width:400px;">
+              <div class="carousel-caption">
+                <h3>LED világítás</h3>
+                <p>Minden 2024-es KTM DUKE modell elöl és hátul nagy teljesítményű LED-lámpákkal van felszerelve. Ezek nem csak akkor működnek, amikor a világ besötétedik, hanem jobb láthatóságot is biztosítanak forgalmas forgalom vagy ködös útviszonyok között.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="dukeslider/s2.png" style="width:400px;">
+              <div class="carousel-caption">
+                <h3>Követő képernyő</h3>
+                <p>A TRACK Screen az 5"-es TFT-kijelző grafikáját versenyközpontúbbá alakítja, megnöveli a fordulatszámmérőt, megjeleníti a köridőt, a kiválasztott fokozat kijelzőjét, csökkenti a sebességkijelzés méretét, és megjeleníti a lovassegítő beállításokat. Sőt, a TRACK Screen is lehetővé teszi a versenyzők számára az Indításvezérlés kezdeményezését.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" style="color:rgb(199, 86, 6);"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" style="color:rgb(199, 86, 6);" ></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+                <!-- Táblázat -->
+      <table style="  margin-left: auto; margin-right: auto;">
+        <caption><h2 style="text-align: left; font-size: 30px; color:white; text-indent: 20px;">MŰSZAKI ADATOK</h2></caption>
+        <tr style="font-size:110%">
+          <th><b>MOTOR</b></th>
+          <th></th>
+          <th><b>ALVÁZ</b></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><b>NYOMATÉK</b></td>
+          <td>39 Nm</td>
+          <td><b>TENGELYTÁV</b></td>
+          <td>1357 mm</td>
+        </tr>
+        <tr>
+          <td><b>SEBESSÉGVÁLTÓ</b></td>
+          <td>6 sebességes</td>
+          <td><b>ABS</b></td>
+          <td>ABS Bosch 9,3 MP kétcsatornás (Supermoto ABS)</td>
+        </tr>
+        <tr>
+          <td><b>AKKUMULÁTOR KAPACITÁSA</b></td>
+          <td>8 Ah</td>
+          <td><b>ELSŐ FÉKTÁRCSA ÁTMÉRŐ</b></td>
+          <td>320 mm</td>
+        </tr>
+        <tr>
+          <td><b>HŰTÉS</b></td>
+          <td>Folyadékhűtés</td>
+          <td><b>HÁTSÓ FÉKTÁRCSA ÁTMÉRŐ</b></td>
+          <td>240 mm</td>
+        </tr>
+        <tr>
+          <td><b>TELJESÍTMÉNY</b></td>
+          <td>44.25 le</td>
+          <td><b>ELSŐ FÉK</b></td>
+          <td>Négydugattyús radiális fix féknyereg, féktárcsa</td>
+        </tr>
+      </table>
+
+      <footer style="text-align:right; color:white; margin-top:200px;">
+            <p>Források:</p>
+            <a href="https://www.w3schools.com" target=”_blank”>W3Schools</a>
+            <a href="https://jquery.com" target=”_blank”>jQuery</a>
+            <a href="https://www.google.com" target=”_blank”>Google</a>
+            <a href="https://www.ktm.com" target=”_blank”>KTM</a>
+            <a href="https://www.tutorialspoint.com/index.htm" target=”_blank”>Tutorialspoint</a>
+            
+            <p style="padding-left:20px">Órai anyagok:</p>
+            <a href="https://github.com/JonisBalint/LN40BGWebTechLev/tree/main" style="padding-right:20px" target=”_blank”>GitHub</a>
+            
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!--bootstrap a carosuel cucclihoz-->
+    <script src="duke.js"></script>
+</body>
+</html>

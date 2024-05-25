@@ -1,0 +1,179 @@
+       /* videó */
+       #ktmVideo {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: block;
+        z-index: 1; /* Hogy a menü fölött legyen */
+    }
+
+    /* menü */
+    header {
+        text-align: center;
+        background-color: #333;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    nav ul li a:hover {
+        background-color: rgb(199, 86, 6);
+    }
+
+    /* lenyíló menü */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgb(199, 86, 6);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    body {
+        /* Belülről kifelé egyre sötétedő lineáris kör háttér */
+        background: rgb(131, 131, 131);
+        background: radial-gradient(circle, rgba(255,255,255,0) 2%, rgba(0,0,0,0.8869922969187675) 49%);
+    }
+
+    
+
+    #dukeImage {
+        transition: opacity 0.2s ease-in-out, left 0.2s ease-in-out;
+    }
+
+    .checkbox-container {
+display: flex; /* Flexbox layout használata */
+gap: 20px;
+align-items: center;
+position: absolute;
+top: 600px;
+right: 100px;
+}
+
+/* Checkbox formázáshoz előtte az alapértelmezettet le kell venni */
+INPUT[type=checkbox]{
+border: 2px solid white;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+
+/* Szín, pipa stimmeljen mind2 checkboxnál */
+INPUT[type=checkbox].sarga-checkbox:checked{
+background: #ca720d url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") center no-repeat;
+background-size: 20px;
+}
+
+INPUT[type=checkbox].kek-checkbox:checked{
+background: rgb(0, 0, 94) url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") center no-repeat;
+background-size: 20px;
+}
+
+INPUT[type=checkbox].fek-checkbox:checked{
+    background: black url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") center no-repeat;
+    background-size: 20px;
+    }
+    .fek-checkbox {
+    background-color: black;
+    }
+
+.kek-checkbox {
+background-color: rgb(0, 0, 94);
+}
+
+.sarga-checkbox {
+background-color: #ca720d; 
+}
+
+.video-controls {
+    display: flex;
+    justify-content: center;
+    position:relative;
+    margin-top: 0px;
+    padding:0px;
+}
+
+button.control-button {
+    background-color: rgb(199, 86, 6);
+    color:black;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    width:25px;
+    height:25px;
+    position: relative;
+    z-index: 1; /* Hogy a menü fölött legyen */
+    padding:0px;
+}
+
+.control-button:hover {
+    background-color: rgb(255, 100, 10);
+}
+
+#vol-control{
+    display:none
+}
+
+#vol-control:hover{
+    display:block
+}
+#mute:hover + #vol-control {
+    display:block
+  }
+
+.dropdown-content control-button:hover {
+    background: rgb(199, 86, 6); /* Háttérszín hover állapotban */
+    width: 25px;
+    display:block;
+    bottom: 100%;
+}
+
+.dropdown-content button.control-button {
+    width: 25px; /* Alapértelmezett szélesség */
+    display: block; /* Blokk elem */
+    bottom: 100%;
+}
+
